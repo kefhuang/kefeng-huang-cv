@@ -3,22 +3,25 @@
 % Plant Bot 
 %====================
 \subsection{{Robotic System for Identifying and Watering House Plants 
-    \hfill 10/2021 --- Present}}
+    \hfill 10/2021 --- 04/2022}}
 \subtext{Supervised by Prof. Simon Julier at University College London}
 \begin{zitemize}
-    \item \textbf{Technology}: The robot is simulated over ROS and python is the main
-        programming language. 
-    \item \textbf{Team Work}: We worked together as a team of 6 people, with different
-        people working on different aspects including SLAM, Control, 
-        Path Planning and etc. Each person will implement the corresponding 
-        nodes in ROS and information is transferred using technics including
-        Topics.
-    \item \textbf{Personal Contribution}: I am responsible for the object 
-        detection and plant identification. 
+    \item \textbf{Brief}: 
+        This project is to create an autonomous robotic system to water houseplants
+        in a simulated environment in ROS Noetic. 
+        We were working in a group of 6 people with different aspects including
+        SLAM, Control, Path Planing, Classification \& Detection and Exploration.
+        The project repository is public on Github repository
+        \url{https://github.com/Aashvin/COMP0031-PlantBot}.
+    \item \textbf{Personal Contribution}: 
+        My work was about Classification \& Detection. 
         A 3-month literature review is first conducted on detection and 
         segmentation methods as well as the plant identification networks.
-        Currently I am implementing the YOLOv3 nodes which takes the images
-        as input and return detected objects and their bounding boxes.
+        Darknet\_ROS package was then integrated to our project. 
+        To support YOLOv4, the package was then modified and the new package 
+        created can be found on Github repository
+        \url{https://github.com/t1mkhuan9/yolov4-ros-noetic}.
+
 \end{zitemize}
 
 %====================
