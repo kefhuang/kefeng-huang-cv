@@ -1,46 +1,51 @@
-
 %====================
 % Plant Bot 
 %====================
-\subsection{{Robotic System for Identifying and Watering House Plants 
-    \hfill 10/2021 --- 04/2022}}
-\subtext{Supervised by Prof. Simon Julier at University College London}
-\begin{zitemize}
-    \item \textbf{Brief}: 
-        Created an autonomous robotic system to water houseplants
-        in a simulated environment in ROS Noetic, with a group of 6 people working in 
-        different aspects including
-        SLAM, Control, Path Planing, Classification \& Detection and Exploration.
-        Available on Github repository
-        \url{https://github.com/Aashvin/COMP0031-PlantBot}.
-    \item \textbf{Classification \& Detection}: 
-        Conducted a literature review on detection and 
-        segmentation methods as well as the plant identification networks.
-        Integrated Darknet\_ROS package into our project. 
-        Modified the package to support YOLOv4.
-        Available on Github repository
-        \url{https://github.com/t1mkhuan9/yolov4-ros-noetic}.
-\end{zitemize}
+\subsection{
+    Robotic System for Identifying and Watering House Plants 
+    \hfill 10/2021 --- 04/2022
+}
+    \subtext{Supervised by Prof. Simon Julier at University College London}
+    \begin{zitemize}
+        \item   Proved the possibility of an autonomous robotic system to water houseplants
+                by creating one in a simulated environment in ROS Noetic, 
+                with a group of 6 people working in different aspects including
+                SLAM, Control, Path Planing, Classification \& Detection and Exploration.
+                Available on Github repository
+                \url{https://github.com/Aashvin/COMP0031-PlantBot}.
+        \item   \textbf{Classification \& Detection}: 
+                Conducted a literature review on detection and 
+                segmentation methods as well as the plant identification networks.
+                Integrated Darknet\_ROS package into our project.
+                Modified the package to support different YOLO versions including YOLOv4.
+                Available on Github repository
+                \url{https://github.com/t1mkhuan9/yolov4-ros-noetic}.
+        \item   \textbf{Score:}
+                81 in individual literature review, 72 in group report and 80 in individual report
+    \end{zitemize}
+
 
 %====================
 % Image Seg
 %====================
-\subsection{{Image Based Point Cloud Segmentation 
-    \hfill 08/2021 --- Present}}
-\begin{zitemize}
-    \item \textbf{Technology}: Experiments are run over KITTI-Odometry dataset 
-        as it contains both images and point cloud in each frame.
-        SemanticKITTI is also used to provide the labels.
-        Python is the main programming language as well as Pytorch to train
-        the network.
-        Nvidia Segmentation (DeepV3WPlus) is adapted to extract features from 
-        images.
-    \item \textbf{Description}: Each 3D point is first projected to images within
-        the same frame and the frames before. 
-        It is first implemented to choose the mode of the labels of the same point
-        on different images. 
-        Then it is improved by making predictions using the features of the images
-        instead.
-        A network is trained on a new dataset that combines the actual point
-        label and the corresponding images features. 
-\end{zitemize}
+\subsection{
+    Learning 3D Point Cloud Segmentation by Aggregating 2D Image Semantics
+    \hfill 08/2021 --- 12/2021
+}
+    \subtext{Self-motivated Research Project}
+    \begin{zitemize}
+        \item   Projected each 3D point to corresponding image pixels in different frames
+                and used image semantics information to generate 3D point segmentation.
+                Explored two possible approaches:
+                (1) directly using the result produced by image segmentation by choosing
+                the mode among them
+                (2) removed the final layer of the image segmentation network and use the
+                features to get 3D point information.
+        \item   Conducted experiments based on the KITTI-Odometry dataset using the 
+                ground truth value from SemanticKITTI dataset.
+                Used and adapted Nvidia Segmentation (DeepV3WPlus Network) as the image
+                segmentation method.
+                Trained a simple neural network based on the image semantics features to
+                predict the 3D point semantic label.
+        \item   Available on Github repository: \url{https://github.com/t1mkhuan9/image-based-pointcloud-segmentation}
+    \end{zitemize}
